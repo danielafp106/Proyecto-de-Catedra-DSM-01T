@@ -1,5 +1,5 @@
 # Calculadora de Descuentos de Ley para El Salvador
-## Universidad Don Bosco | Proyecto de Catedra DSM 01T
+### Universidad Don Bosco | Proyecto de Catedra DSM 01T
 _Creacion de una aplicación para dispositivos móviles Android en el lenguaje de programación Java, capaz de realizar el cálculo de los descuentos de ley de El Salvador aplicables al salario bruto mensual según contrato del usuario, y que de esta manera el usuario pueda conocer el monto de descuentos de ISR (si aplica), AFP e ISSS, por ende el monto neto a recibir_
 
 ## Autores ✒️
