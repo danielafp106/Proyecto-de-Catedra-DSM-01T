@@ -3,10 +3,10 @@
 _Creacion de una aplicación para dispositivos móviles Android en el lenguaje de programación Java, capaz de realizar el cálculo de los descuentos de ley de El Salvador aplicables al salario bruto mensual según contrato del usuario, y que de esta manera el usuario pueda conocer el monto de descuentos de ISR (si aplica), AFP e ISSS, por ende el monto neto a recibir_
 
 ## Autores ✒️
-* **Daniel Wilfredo Granados Hernández   GH161659** - **Programación, diseño**
-* **Daniela María Flores Pérez           FP180271** - **Programación, diseño**
-* **Jocelyn Alejandra Cornejo Cruz       CC182307** - **Programación, diseño**
-* **Luis Magdiel Sánchez Cortez          SC180226** - **Programación, diseño**
+* **Daniel Wilfredo Granados Hernández   GH161659**
+* **Daniela María Flores Pérez           FP180271**
+* **Jocelyn Alejandra Cornejo Cruz       CC182307**
+* **Luis Magdiel Sánchez Cortez          SC180226**
 
 ## Licencia :page_facing_up: 
 Este proyecto está bajo la licencia **_Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)_**.
