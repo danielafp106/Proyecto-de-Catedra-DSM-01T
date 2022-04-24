@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CalculoSalario">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/btnIniciarSesion4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/boton_redondeado"
+            android:text="@string/Calcular"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/BlancoSuave"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/input_redondeados"
+            android:entries="@array/contratos"
+            android:fontFamily="@font/roboto_light"
+            android:foregroundTint="@color/AquaFuerte"
+            android:paddingLeft="38dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSalarioBruto" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="29dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSalarioBruto"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSalarioBruto"
+            app:srcCompat="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        <EditText
+            android:id="@+id/txtSalarioBruto"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/input_redondeados"
+            android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="@string/SalarioInput"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:paddingLeft="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textColorHint="@color/GrisSuave"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

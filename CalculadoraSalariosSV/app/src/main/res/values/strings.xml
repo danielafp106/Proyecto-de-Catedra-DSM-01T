@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">CalculadoraSalariosSV</string>
+    <string name="app_name">Salarios SV</string>
+    <string name="SplashTitulo1">C A L C U L A D O R A</string>
+    <string name="SplashTitulo2">Descuentos de Ley</string>
+    <string name="SplashTitulo3">PARA EL SALVADOR</string>
+    <string name="Porcentaje">0%</string>
+    <string name="IniciarSesion">Iniciar Sesión</string>
+    <string name="IniciaSesion">Inicia Sesión</string>
+    <string name="Correo">Correo Eléctronico</string>
+    <string name="Contraseña">Contraseña</string>
+    <string name="LoginP1">¿No tienes cuenta?</string>
+    <string name="Registrate">Regístrate</string>
+    <string name="LoginP2">¿Olvidaste tu contraseña?</string>
+    <string name="Registrarse">Regístrarse</string>
+    <string name="NombreApellido">Nombre Apellido</string>
+    <string name="ConfirmarContraseña">Confirmar Contraseña</string>
+    <string name="RegistrarseP1">¿Ya tienes una cuenta?</string>
+    <string name="CambioContraseña">Cambio de Contraseña</string>
+    <string name="ActualContraseña">Contraseña Actual</string>
+    <string name="NuevaContraseña">Contraseña Nueva</string>
+    <string name="CambiarContraseña">Cambiar Contraseña</string>
+    <string name="lbCalculoSalario">Cálculo de Salario</string>
+    <string name="OpciónCalculo">Cálculo de Salario</string>
+    <string name="OpciónHistorico">Historico de Cálculos</string>
+    <string name="CerrarSesión">Cerrar Sesión</string>
+    <string name="SalarioInput">Ingrese su salario</string>
+    <string name="Calcular">Calcular</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

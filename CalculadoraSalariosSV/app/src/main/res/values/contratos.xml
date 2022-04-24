@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contratos">
+        <item>Tiempo Indefinido</item>
+        <item>Periodo Determinado</item>
+        <item>Servicios Profesionales</item>
+        <item>Interinatos</item>
+    </string-array>
+</resources>

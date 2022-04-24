@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--TEMA SELECCIONADO-->
+    <color name="AquaSuave">#4ab8b8</color>         <!--FONDO-->
+    <color name="AquaFuerte">#219c9c</color>        <!--BOTONES, ICONOS, BARRAS DECORATIVAS-->
+    <color name="GrisSuave">#aaaaaa</color>         <!--HINTS-->
+    <color name="GrisFuerte">#b4b4b4</color>        <!--BOTON VENTANA EMERGENTE-->
+    <color name="Blanco">#FFFFFFFF</color>          <!--FONDO-->
+    <color name="BlancoSuave">#FBFBFB</color>       <!--BARRAS DECORATIVAS-->
+    <color name="Negro">#191919</color>             <!--TEXTOS-->
+    <color name="AquaOpciones">#5ABEBE</color>      <!--OPCIONES MENU-->
+    <color name="AquaCerrarSesion">#80c7c7</color>  <!--OPCIONES MENU-->
+    <color name="AquaHistorial">#c5e3e3</color>     <!--DETALLE DEL HISTORIAL-->
 </resources>
