@@ -30,7 +30,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
 
     <TextView
         android:id="@+id/txtIniciarSesion"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <Button
-        android:id="@+id/btnIniciarSesion2"
+        android:id="@+id/btnRegistrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -63,10 +63,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConfirmarContraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmarContrasena" />
 
     <EditText
-        android:id="@+id/txtConfirmarContraseña"
+        android:id="@+id/txtConfirmarContrasena"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -87,10 +87,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseñaRegistrar" />
+        app:layout_constraintTop_toBottomOf="@+id/txtContrasenaRegistrar" />
 
     <EditText
-        android:id="@+id/txtContraseñaRegistrar"
+        android:id="@+id/txtContrasenaRegistrar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"

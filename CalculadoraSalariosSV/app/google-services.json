@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085241915863",
+    "project_id": "calculadora-salarios-dsm",
+    "storage_bucket": "calculadora-salarios-dsm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085241915863:android:c12cdd2184db889cc67392",
+        "android_client_info": {
+          "package_name": "udb.fp180271dsm.calculadorasalariossv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085241915863-786hqtr88el42hks6nom2v6t78dodae3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATi3dxOUmLyQH5D983q9tIlE7hn43UEPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085241915863-786hqtr88el42hks6nom2v6t78dodae3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
