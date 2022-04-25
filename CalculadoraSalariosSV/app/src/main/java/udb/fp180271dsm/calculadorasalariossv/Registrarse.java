@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class Registrarse extends AppCompatActivity {
 
@@ -59,6 +61,7 @@ public class Registrarse extends AppCompatActivity {
         email = txtCorreoRegistro.getText().toString();
         password = txtContra.getText().toString();
         confirmarContra = txtConfirmarContra.getText().toString();
+        name = txtNombreApellido.getText().toString();
 
 
         if (TextUtils.isEmpty(email)) {
@@ -83,13 +86,30 @@ public class Registrarse extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Usuario Registrado Correctamente!", Toast.LENGTH_LONG).show();
-                            //abrir siguiente ventana
-                            AbrirActivity(Registrarse.this,Login.class);
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                            UserProfileChangeRequest asignandoNombre = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name)
+                                    .build();
+
+                            user.updateProfile(asignandoNombre)
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(getApplicationContext(), "Usuario Registrado Correctamente!", Toast.LENGTH_LONG).show();
+                                                //abrir siguiente ventana
+                                                AbrirActivity(Registrarse.this,Login.class);
+                                            }
+                                            else{
+                                                Toast.makeText(getApplicationContext(), "Nombre y Apellido fallaron", Toast.LENGTH_LONG).show();
+                                            }
+                                        }
+                                    });
+
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "El usuario no fue Registrado", Toast.LENGTH_LONG).show();
-
+                            Log.d("Aver",task.getException().getMessage());
                         }
                     }
                 });

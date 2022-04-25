@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -50,13 +51,13 @@ public class Login extends AppCompatActivity {
         txtRegistrarse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AbrirActivity(Login.this, Registrarse.class);
+                AbrirActivity(Login.this, Registrarse.class,"");
             }
         });
         txtRegistrarse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AbrirActivity(Login.this, Registrarse.class);
+                AbrirActivity(Login.this, Registrarse.class,"");
             }
         });
 
@@ -85,9 +86,10 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Inicio de Sesion Correcto!", Toast.LENGTH_LONG).show();
+                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                             //abrimos la pantalla del menu
-                            AbrirActivity(Login.this, ContenedorMenu.class);
+                            AbrirActivity(Login.this, ContenedorMenu.class,user.getDisplayName());
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "Inicio de Sesion Incorrecto", Toast.LENGTH_LONG).show();
@@ -100,14 +102,18 @@ public class Login extends AppCompatActivity {
 
 
 
-    public void AbrirActivity(Context ActivityActual, Class ActivityNueva) {
+    public void AbrirActivity(Context ActivityActual, Class ActivityNueva, String user) {
         Intent intento = new Intent(ActivityActual, ActivityNueva);
+        if(user!="")
+        {
+            intento.putExtra("name",user);
+        }
         startActivity(intento);
     }
 
     public void InicioSesionCorrecto(View v)
     {
-        AbrirActivity(Login.this, ContenedorMenu.class);
+        AbrirActivity(Login.this, ContenedorMenu.class,"");
     }
 /*
     public void prueba(View v)
