@@ -39,6 +39,7 @@ public class CambioContrasena extends AppCompatActivity {
                 String NuevaContra = ContraNueva.getText().toString();
                 String ActualContra= ContraActual.getText().toString();
                 String ConfirmarContra= ContraConfirmar.getText().toString();
+                String Correo = user.getEmail();
 
                 if (TextUtils.isEmpty(ActualContra)) {
                     Toast.makeText(getApplicationContext(), "Ingresar contraseña actual", Toast.LENGTH_LONG).show();
@@ -56,16 +57,38 @@ public class CambioContrasena extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Contraseñas no coinciden", Toast.LENGTH_LONG).show();
                     return;
                 }
+                if (NuevaContra.length()<6){
+                    Toast.makeText(getApplicationContext(), "Contraseña debe ser mayor a 6 caracteres, intentelo de nuevo", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                AuthCredential credenciales = EmailAuthProvider.getCredential(Correo,ActualContra);
 
-
-                user.updatePassword(NuevaContra).addOnCompleteListener(new OnCompleteListener<Void>() {
+                user.reauthenticate(credenciales).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Contraseña Actualizada!", Toast.LENGTH_LONG).show();
+                        if (task.isSuccessful()){
+                            user.updatePassword(NuevaContra).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "Contraseña Actualizada!", Toast.LENGTH_LONG).show();
+                                        finish();
+                                    }
+                                    else
+                                    {
+                                        Toast.makeText(getApplicationContext(), "Algo ha salido mal, vuelva a intentarlo :(", Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "Contraseña actual incorrecta, por favor intentelo de nuevo", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
+
+
+
 
 
 

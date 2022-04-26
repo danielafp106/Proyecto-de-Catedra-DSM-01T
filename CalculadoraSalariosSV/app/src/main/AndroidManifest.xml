@@ -18,7 +18,9 @@
             android:theme="@style/Theme.CalculadoraSalariosSV.NoActionBar"/>
         <activity
             android:name=".CambioContrasena"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CalculadoraSalariosSV.NoActionBar"
+            />
         <activity
             android:name=".Registrarse"
             android:exported="false"
