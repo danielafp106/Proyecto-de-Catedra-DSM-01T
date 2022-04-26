@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dialogos_CalculoSalario.Dialogo_GuardarCalculo"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/barraColorSuperior"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/AquaFuerte"
+        android:elevation="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TituloDialogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="5dp"
+            android:fontFamily="@font/roboto_slab"
+            android:text="@string/TituloDialogo"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/DescripcionDialogo"
+            android:layout_width="260dp"
+            android:layout_height="91dp"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/roboto_slab"
+            android:gravity="center_horizontal"
+            android:text="@string/DescripcionDialogo"
+            android:textAlignment="center"
+
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDialogoSi"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boton_redondeado"
+                android:text="Si"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/BlancoSuave"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDialogoNo"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/boton_redondeado_gris"
+                android:text="No"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/BlancoSuave"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

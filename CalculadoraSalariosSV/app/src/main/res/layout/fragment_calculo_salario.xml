@@ -13,7 +13,7 @@
         android:layout_height="fill_parent">
 
         <Button
-            android:id="@+id/btnIniciarSesion4"
+            android:id="@+id/btnCalcularSalario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"

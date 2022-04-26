@@ -25,6 +25,9 @@
     <string name="CerrarSesión">Cerrar Sesión</string>
     <string name="SalarioInput">Ingrese su salario</string>
     <string name="Calcular">Calcular</string>
+    <string name="DescripcionDialogo">Si presiona [Si] se guardará el cálculo en la sección de hístoricos</string>
+    <string name="TituloDialogo">¿Desea guardar el cálculo?</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

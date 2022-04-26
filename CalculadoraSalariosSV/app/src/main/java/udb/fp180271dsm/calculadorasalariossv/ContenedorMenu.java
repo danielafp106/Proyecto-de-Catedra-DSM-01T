@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,6 +66,10 @@ public class ContenedorMenu extends AppCompatActivity {
                         ft.disallowAddToBackStack();
                         ft.commit();
                         Toolbar("Historico de Cálculos");
+                        break;
+                    case R.id.OpcCambiarContra:
+                        Intent intento = new Intent(ContenedorMenu.this,CambioContrasena.class);
+                        startActivity(intento);
                         break;
                 }
                 return false;

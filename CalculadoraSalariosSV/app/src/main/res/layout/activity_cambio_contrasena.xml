@@ -8,7 +8,7 @@
     tools:context=".CambioContrasena">
 
     <Button
-        android:id="@+id/btnIniciarSesion3"
+        android:id="@+id/btnCambiarContrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <EditText
-        android:id="@+id/txtConfirmarContraseña2"
+        android:id="@+id/txtContraNueva"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="32dp"
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtConfirmarContraseña2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtContraNueva" />
 
     <ImageView
         android:id="@+id/imageView12"
