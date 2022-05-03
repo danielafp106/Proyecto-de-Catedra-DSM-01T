@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardBackgroundColor="@color/Blanco">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/FondoHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="625dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/historico_fondo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fondoVerde3"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/boton_redondeado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco2" />
+
+        <TextView
+            android:id="@+id/fondoBlanco3"
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/tarjetas_historico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco2" />
+
+        <TextView
+            android:id="@+id/txtSalarioLQuincenalH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/DineroTexto"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView36"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/USD"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+        <TextView
+            android:id="@+id/textView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/SalarioLiquidoQ"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView29"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <ImageView
+            android:id="@+id/imageView29"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32"
+            app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+        <TextView
+            android:id="@+id/txtSalarioLMensualH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/DineroTexto"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView32"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/USD"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/SalarioLiquidoM"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView27"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco2" />
+
+        <ImageView
+            android:id="@+id/imageView27"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco2"
+            app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+        <TextView
+            android:id="@+id/fondoVerde2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/boton_redondeado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco" />
+
+        <TextView
+            android:id="@+id/fondoBlanco2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/tarjetas_historico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco" />
+
+        <TextView
+            android:id="@+id/fondoVerde"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/boton_redondeado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FondoVerde" />
+
+        <TextView
+            android:id="@+id/fondoBlanco"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/tarjetas_historico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/Renta"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/imageView21"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/TipoDeContrato"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView19"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
+
+        <TextView
+            android:id="@+id/textView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="35dp"
+            android:text="@string/Descuentos"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView26"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/AFP"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView20"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
+
+        <TextView
+            android:id="@+id/textView27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/AFP_Porcentaje"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView23"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
+
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/ISSS_Porcentaje"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+        <TextView
+            android:id="@+id/txtRentaPorcentajeH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/Porcentaje2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView23"
+            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/ISSS"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <ImageView
+            android:id="@+id/imageView26"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/FondoBlanco"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/imageView23"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toEndOf="@+id/textView25"
+            app:layout_constraintTop_toBottomOf="@+id/imageView24"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toEndOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/imageView20"
+            app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+        <TextView
+            android:id="@+id/txtContratoH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Indefinido"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/txtContratoH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/SalarioBruto"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+
+        <TextView
+            android:id="@+id/txtContratoH3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/AFP"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtContratoH2" />
+
+        <TextView
+            android:id="@+id/txtContratoH4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/ISSS"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtContratoH3" />
+
+        <TextView
+            android:id="@+id/txtContratoH5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/Renta"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtContratoH4" />
+
+        <TextView
+            android:id="@+id/FondoVerde"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/boton_redondeado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaHistorico" />
+
+        <TextView
+            android:id="@+id/FondoBlanco"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/tarjetas_historico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaHistorico" />
+
+        <TextView
+            android:id="@+id/txtFechaHistorico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/boton_redondeado"
+            android:paddingStart="15dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="8dp"
+            android:text="@string/HistorialTexto"
+            android:textColor="@color/Blanco"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="33dp"
+            android:text="@string/SalarioBruto"
+            android:textColor="@color/Negro"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/imageView18"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaHistorico" />
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="16dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="33dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFechaHistorico"
+            app:srcCompat="@drawable/ic_baseline_attach_money_24" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/USD"
+            android:textAlignment="viewStart"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/txtSalarioBrutoH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="175dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/DineroTexto"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/txtSalarioBrutoH2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/DineroTexto"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtContratoH2"
+            app:layout_constraintTop_toBottomOf="@+id/fondoBlanco" />
+
+        <TextView
+            android:id="@+id/txtAFPDolaresH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/OtraCantidad"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtContratoH2"
+            app:layout_constraintTop_toBottomOf="@+id/txtSalarioBrutoH2" />
+
+        <TextView
+            android:id="@+id/txtISSSDolaresH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/OtraCantidad"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtContratoH2"
+            app:layout_constraintTop_toBottomOf="@+id/txtAFPDolaresH" />
+
+        <TextView
+            android:id="@+id/txtRentaDolaresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/OtraCantidad"
+            android:textAlignment="textEnd"
+            android:textColor="@color/Negro"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/txtContratoH2"
+            app:layout_constraintTop_toBottomOf="@+id/txtISSSDolaresH" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

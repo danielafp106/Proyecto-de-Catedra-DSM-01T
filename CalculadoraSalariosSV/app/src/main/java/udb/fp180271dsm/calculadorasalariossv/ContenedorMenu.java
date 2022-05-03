@@ -71,6 +71,10 @@ public class ContenedorMenu extends AppCompatActivity {
                         Intent intento = new Intent(ContenedorMenu.this,CambioContrasena.class);
                         startActivity(intento);
                         break;
+                    case R.id.OpcCerrarSesion:
+                        Intent intento2 = new Intent(ContenedorMenu.this,Login.class);
+                        startActivity(intento2);
+                        break;
                 }
                 return false;
             }

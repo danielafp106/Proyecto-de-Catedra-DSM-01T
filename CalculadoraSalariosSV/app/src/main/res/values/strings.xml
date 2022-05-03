@@ -27,6 +27,23 @@
     <string name="Calcular">Calcular</string>
     <string name="DescripcionDialogo">Si presiona [Si] se guardará el cálculo en la sección de hístoricos</string>
     <string name="TituloDialogo">¿Desea guardar el cálculo?</string>
+    <string name="ComboHintMes">Seleccione un mes</string>
+    <string name="HistorialTexto">Historial: 00/00/0000</string>
+    <string name="SalarioLiquidoM">Salario Líquido Mensual</string>
+    <string name="SalarioLiquidoQ">Salario Líquido Quincenal</string>
+    <string name="SalarioBruto">Salario Bruto</string>
+    <string name="TipoDeContrato">Tipo de Contrato</string>
+    <string name="Descuentos">Descuentos</string>
+    <string name="USD">USD</string>
+    <string name="DineroTexto">$ 0000.00</string>
+    <string name="OtraCantidad">- $ 00.00</string>
+    <string name="AFP">AFP</string>
+    <string name="ISSS">ISSS</string>
+    <string name="Renta">Renta</string>
+    <string name="AFP_Porcentaje">7.25%</string>
+    <string name="ISSS_Porcentaje">3.00%</string>
+    <string name="Porcentaje2">00.00%</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
