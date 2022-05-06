@@ -5,20 +5,31 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import udb.fp180271dsm.calculadorasalariossv.CalculoSalario;
+import udb.fp180271dsm.calculadorasalariossv.ContenedorMenu;
+import udb.fp180271dsm.calculadorasalariossv.Historico;
 import udb.fp180271dsm.calculadorasalariossv.R;
+import udb.fp180271dsm.calculadorasalariossv.Resultados;
 
 
 public class Dialogo_GuardarCalculo extends DialogFragment {
 
     Button Boton_Si, Boton_No;
+    Toolbar tb;
+    ActionBar ab;
 
     public Dialogo_GuardarCalculo() {
         // Required empty public constructor
@@ -33,13 +44,17 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
         Boton_Si=view.findViewById(R.id.btnDialogoSi);
         Boton_No=view.findViewById(R.id.btnDialogoNo);
 
+        Resultados fResultados = new Resultados();
+
+
         Boton_Si.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Aquí llamaremos al siguiente fragment (Siguiente Entrega) por el momento solo se cerrará
-                //-------------Temporal----------
                 getDialog().dismiss();
-                //-------------------------------
+                ContenedorMenu Content = new ContenedorMenu();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                       .replace(R.id.fragmentContainerView,fResultados)
+                       .addToBackStack(null).commit();
             }
         });
 
@@ -54,4 +69,7 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
         return view;
 
     }
+
+
+
 }

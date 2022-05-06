@@ -57,6 +57,8 @@ public class ContenedorMenu extends AppCompatActivity {
                         ft.disallowAddToBackStack();
                         ft.commit();
                         Toolbar("Cálculo de Salario");
+                        dl.close();
+
                         break;
                     case R.id.OpcHistorico:
                         Fragment fHistorico = new Historico();
@@ -66,14 +68,17 @@ public class ContenedorMenu extends AppCompatActivity {
                         ft.disallowAddToBackStack();
                         ft.commit();
                         Toolbar("Historico de Cálculos");
+                        dl.close();
                         break;
                     case R.id.OpcCambiarContra:
                         Intent intento = new Intent(ContenedorMenu.this,CambioContrasena.class);
                         startActivity(intento);
+                        dl.close();
                         break;
                     case R.id.OpcCerrarSesion:
                         Intent intento2 = new Intent(ContenedorMenu.this,Login.class);
                         startActivity(intento2);
+                        dl.close();
                         break;
                 }
                 return false;
@@ -92,7 +97,6 @@ public class ContenedorMenu extends AppCompatActivity {
             ab.setHomeAsUpIndicator(R.drawable.ic_baseline_menu_24);
             ab.setDisplayHomeAsUpEnabled(true);
             ab.setTitle(titulo);
-
         }
     }
 
