@@ -11,8 +11,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentResultListener;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,11 +32,21 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
     Button Boton_Si, Boton_No;
     Toolbar tb;
     ActionBar ab;
+    private Double salario;
+    private Integer idcontrato;
+    private String contrato;
+
+
 
     public Dialogo_GuardarCalculo() {
         // Required empty public constructor
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,14 +56,24 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
         Boton_Si=view.findViewById(R.id.btnDialogoSi);
         Boton_No=view.findViewById(R.id.btnDialogoNo);
 
-        Resultados fResultados = new Resultados();
+        Bundle Datos = getArguments();
+        salario=Datos.getDouble("salario");
+        idcontrato=Datos.getInt("idcontrato");
+        contrato=Datos.getString("contrato");
 
+
+        Resultados fResultados = new Resultados();
 
         Boton_Si.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle EnviarDatos = new Bundle();
+                EnviarDatos.putDouble("RecibirSalario",salario);
+                EnviarDatos.putInt("RecibirIdContrato",idcontrato);
+                EnviarDatos.putString("RecibirContrato",contrato);
+                EnviarDatos.putInt("RecibirOpcion",1);
+                fResultados.setArguments(EnviarDatos);
                 getDialog().dismiss();
-                ContenedorMenu Content = new ContenedorMenu();
                 getActivity().getSupportFragmentManager().beginTransaction()
                        .replace(R.id.fragmentContainerView,fResultados)
                        .addToBackStack(null).commit();
@@ -61,7 +83,16 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
         Boton_No.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle EnviarDatos = new Bundle();
+                EnviarDatos.putDouble("RecibirSalario",salario);
+                EnviarDatos.putInt("RecibirIdContrato",idcontrato);
+                EnviarDatos.putString("RecibirContrato",contrato);
+                EnviarDatos.putInt("RecibirOpcion",2);
+                fResultados.setArguments(EnviarDatos);
                 getDialog().dismiss();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragmentContainerView,fResultados)
+                        .addToBackStack(null).commit();
             }
         });
 

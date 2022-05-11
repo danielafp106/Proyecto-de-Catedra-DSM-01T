@@ -28,10 +28,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spinnerContrato" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinnerContrato"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginStart="32dp"

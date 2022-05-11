@@ -58,7 +58,6 @@ public class ContenedorMenu extends AppCompatActivity {
                         ft.commit();
                         Toolbar("Cálculo de Salario");
                         dl.close();
-
                         break;
                     case R.id.OpcHistorico:
                         Fragment fHistorico = new Historico();

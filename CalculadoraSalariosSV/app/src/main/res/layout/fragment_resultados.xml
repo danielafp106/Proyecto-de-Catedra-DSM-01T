@@ -258,7 +258,7 @@
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco_R" />
 
         <TextView
-            android:id="@+id/textView27_R"
+            android:id="@+id/text_AFP_R"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -271,7 +271,7 @@
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco_R" />
 
         <TextView
-            android:id="@+id/textView28_R"
+            android:id="@+id/textISSS_R"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -281,7 +281,7 @@
             android:textColor="@color/Negro"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView23_R"
-            app:layout_constraintTop_toBottomOf="@+id/textView27_R" />
+            app:layout_constraintTop_toBottomOf="@+id/text_AFP_R" />
 
         <TextView
             android:id="@+id/txtRentaPorcentajeH_R"
@@ -294,7 +294,7 @@
             android:textColor="@color/Negro"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView23_R"
-            app:layout_constraintTop_toBottomOf="@+id/textView28_R" />
+            app:layout_constraintTop_toBottomOf="@+id/textISSS_R" />
 
         <TextView
             android:id="@+id/textView24_R"
@@ -380,15 +380,15 @@
 
         <TextView
             android:id="@+id/txtContratoH_R"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="134dp"
+            android:layout_height="40dp"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="2dp"
             android:fontFamily="@font/roboto_light"
             android:text="Indefinido"
             android:textAlignment="viewStart"
             android:textColor="@color/Negro"
-            android:textSize="20sp"
+            android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView21_R" />
 
