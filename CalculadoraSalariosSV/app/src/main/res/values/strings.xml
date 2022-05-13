@@ -44,6 +44,10 @@
     <string name="ISSS_Porcentaje">3.00%</string>
     <string name="Porcentaje2">00.00%</string>
     <string name="ResultadoTexto">Resultado</string>
+    <string name="RestablecerContra">Restablecer Contraseña</string>
+    <string name="RestablecerContraEmail">Ingrese su Email</string>
+    <string name="RestablecerContraTexto">Restablecer Contraseña</string>
+    <string name="VolverLogin">Volver al Login</string>
 
 
 

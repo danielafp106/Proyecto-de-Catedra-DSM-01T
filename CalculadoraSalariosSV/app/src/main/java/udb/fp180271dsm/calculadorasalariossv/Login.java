@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
-    TextView txtRegistrarse1, txtRegistrarse2;
+    TextView txtRegistrarse1, txtRegistrarse2, txtRestablecerContra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class Login extends AppCompatActivity {
         //region Abrir Registarse
         txtRegistrarse1 = findViewById(R.id.txtRegistrar1);
         txtRegistrarse2 = findViewById(R.id.txtRegistrar2);
+        txtRestablecerContra = findViewById(R.id.txtRestablecerContrase);
 
         txtRegistrarse1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +59,13 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 AbrirActivity(Login.this, Registrarse.class,"");
+            }
+        });
+
+        txtRestablecerContra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AbrirActivity(Login.this, RestablecerContra.class,"");
             }
         });
 
@@ -129,7 +137,7 @@ public class Login extends AppCompatActivity {
         txtCorreo = findViewById(R.id.txtCorreo);
         txtContra = findViewById(R.id.txtContra);
 
-        btnLogin = findViewById(R.id.btnIniciarSesion);
+        btnLogin = findViewById(R.id.btnRestablecer);
 
     }
 
