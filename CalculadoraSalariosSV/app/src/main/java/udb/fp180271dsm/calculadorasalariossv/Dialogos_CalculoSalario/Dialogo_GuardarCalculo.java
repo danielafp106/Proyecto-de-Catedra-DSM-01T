@@ -35,6 +35,7 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
     private Double salario;
     private Integer idcontrato;
     private String contrato;
+    private String uid;
 
 
 
@@ -60,6 +61,7 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
         salario=Datos.getDouble("salario");
         idcontrato=Datos.getInt("idcontrato");
         contrato=Datos.getString("contrato");
+        uid=Datos.getString("uid");
 
 
         Resultados fResultados = new Resultados();
@@ -72,6 +74,7 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
                 EnviarDatos.putInt("RecibirIdContrato",idcontrato);
                 EnviarDatos.putString("RecibirContrato",contrato);
                 EnviarDatos.putInt("RecibirOpcion",1);
+                EnviarDatos.putString("uid",uid);
                 fResultados.setArguments(EnviarDatos);
                 getDialog().dismiss();
                 getActivity().getSupportFragmentManager().beginTransaction()
@@ -88,6 +91,7 @@ public class Dialogo_GuardarCalculo extends DialogFragment {
                 EnviarDatos.putInt("RecibirIdContrato",idcontrato);
                 EnviarDatos.putString("RecibirContrato",contrato);
                 EnviarDatos.putInt("RecibirOpcion",2);
+                EnviarDatos.putString("uid",uid);
                 fResultados.setArguments(EnviarDatos);
                 getDialog().dismiss();
                 getActivity().getSupportFragmentManager().beginTransaction()

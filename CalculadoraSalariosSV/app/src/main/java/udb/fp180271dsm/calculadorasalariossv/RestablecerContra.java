@@ -2,10 +2,13 @@ package udb.fp180271dsm.calculadorasalariossv;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -16,6 +19,7 @@ public class RestablecerContra extends AppCompatActivity {
 
 
     private EditText txtEmail;
+    private TextView VolverLogin;
     private Button btnRestablecerContra;
 
     private String emailText="";
@@ -26,7 +30,15 @@ public class RestablecerContra extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restablecer_contra);
-
+        VolverLogin = findViewById(R.id.txtRegresar);
+        VolverLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intento = new Intent(RestablecerContra.this, Login.class);
+                startActivity(intento);
+                finish();
+            }
+        });
         mAuth = FirebaseAuth.getInstance();
         txtEmail= (EditText) findViewById(R.id.txtCorreo);
         btnRestablecerContra =(Button) findViewById(R.id.btnRestablecer);

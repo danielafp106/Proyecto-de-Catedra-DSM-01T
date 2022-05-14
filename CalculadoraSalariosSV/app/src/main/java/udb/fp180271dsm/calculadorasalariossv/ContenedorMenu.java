@@ -28,6 +28,7 @@ public class ContenedorMenu extends AppCompatActivity {
     FragmentTransaction ft;
     TextView user;
     View header;
+    public String uid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,18 +40,23 @@ public class ContenedorMenu extends AppCompatActivity {
         menuLateral = findViewById(R.id.menuLateral);
         fm = getSupportFragmentManager();
         String name = getIntent().getStringExtra("name");
+        uid = getIntent().getStringExtra("uid");
         header = menuLateral.getHeaderView(0);
         user = header.findViewById(R.id.txtNombreUsuario);
         user.setText(name);
+        Bundle b = new Bundle();
+        b.putString("uid",uid);
         //endregion
 
         //region Menu Lateral Navegacion - Configuraciones
         menuLateral.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 switch (item.getItemId()){
                     case R.id.OpcSalario:
                         Fragment fCalculo = new CalculoSalario();
+                        fCalculo.setArguments(b);
                         ft = fm.beginTransaction();
                         ft.replace(R.id.fragmentContainerView, fCalculo,"Salario");
                         //ft.addToBackStack(null);
@@ -61,6 +67,7 @@ public class ContenedorMenu extends AppCompatActivity {
                         break;
                     case R.id.OpcHistorico:
                         Fragment fHistorico = new Historico();
+                        fHistorico.setArguments(b);
                         ft = fm.beginTransaction();
                         ft.replace(R.id.fragmentContainerView, fHistorico,"Historico");
                         //ft.addToBackStack(null);
@@ -83,6 +90,12 @@ public class ContenedorMenu extends AppCompatActivity {
                 return false;
             }
         });
+        Fragment fCalculo = new CalculoSalario();
+        fCalculo.setArguments(b);
+        ft = fm.beginTransaction();
+        ft.replace(R.id.fragmentContainerView, fCalculo,"Salario");
+        ft.disallowAddToBackStack();
+        ft.commit();
         Toolbar("Cálculo de Salario");
 //endregion
 

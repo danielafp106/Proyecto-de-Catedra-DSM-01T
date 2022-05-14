@@ -7,20 +7,26 @@
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/boton_ovalado.xml" value="0.1595" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/boton_redondeado.xml" value="0.136" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/estilo_action_bar.xml" value="0.136" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/historico_fondo.xml" value="0.1055" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/ic_image2vector.xml" value="0.136" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1645" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/ic_loguito.xml" value="0.136" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/input_ovalado.xml" value="0.1595" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/inputs_redondeados.xml" value="0.136" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/drawable/tarjetas_historico.xml" value="0.1055" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_calculo_salario.xml" value="0.264" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_cambio_contrasena.xml" value="0.264" />
-        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_contenedor_menu.xml" value="0.1" />
-        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_login.xml" value="0.4" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_contenedor_menu.xml" value="0.264" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_registrarse.xml" value="0.264" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_restablecer_contra.xml" value="0.264" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/encabezado_menu.xml" value="0.264" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/fragment_calculo_salario.xml" value="0.264" />
-        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/fragment_historico.xml" value="0.12552083333333333" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/fragment_dialogo__guardar_calculo.xml" value="0.4" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/fragment_historico.xml" value="0.264" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/fragment_resultados.xml" value="0.264" />
+        <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/historico_item.xml" value="0.4" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/menu/menu_lateral.xml" value="0.264" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1645" />
         <entry key="..\:/DSM/PROYECTO/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/xml/tipos_de_contrato.xml" value="0.12552083333333333" />
@@ -29,22 +35,10 @@
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/drawable/boton_redondeado_gris.xml" value="0.33" />
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/drawable/estilo_action_bar.xml" value="0.3635" />
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_cambio_contrasena.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_contenedor_menu.xml" value="0.289002557544757" />
+        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_contenedor_menu.xml" value="0.3625" />
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_login.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_main.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/activity_registrarse.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/encabezado_menu.xml" value="0.3625" />
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/fragment_calculo_salario.xml" value="0.3625" />
         <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/fragment_dialogo__guardar_calculo.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/fragment_historico.xml" value="0.18541666666666667" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/fragment_resultados.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/layout/historico_item.xml" value="0.33" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/menu/menu_lateral.xml" value="0.3625" />
-        <entry key="..\:/Users/magdi/Desktop/CalcuSalarios/CalculadoraSalariosSV/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3465" />
-        <entry key="..\:/Users/xvwil/Desktop/DSM 12 Mayo/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_cambio_contrasena.xml" value="0.2056159420289855" />
-        <entry key="..\:/Users/xvwil/Desktop/DSM 12 Mayo/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_contenedor_menu.xml" value="0.2056159420289855" />
-        <entry key="..\:/Users/xvwil/Desktop/DSM 12 Mayo/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_login.xml" value="0.2056159420289855" />
-        <entry key="..\:/Users/xvwil/Desktop/DSM 12 Mayo/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_restablecer_contra.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/xvwil/Desktop/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_login.xml" value="0.2056159420289855" />
         <entry key="..\:/Users/xvwil/Desktop/ProyectoCatedra-DSM01T/CalculadoraSalariosSV/app/src/main/res/layout/activity_registrarse.xml" value="0.2056159420289855" />
       </map>

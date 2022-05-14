@@ -23,8 +23,18 @@ public class CalculoSalario extends Fragment {
     private String contrato;
     private EditText edit_Salario;
     private Spinner spin_Contratos;
+    private String uid;
+
     public CalculoSalario() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            uid = getArguments().getString("uid");
+        }
     }
 
 
@@ -57,6 +67,7 @@ public class CalculoSalario extends Fragment {
                 bundle.putInt("idcontrato",idcontrato);
                 bundle.putDouble("salario",salario);
                 bundle.putString("contrato",contrato);
+                bundle.putString("uid",uid);
                 Dialogo_GuardarCalculo CuadroDialogo = new Dialogo_GuardarCalculo();
                 CuadroDialogo.setArguments(bundle);
                 CuadroDialogo.show(getChildFragmentManager(),"Salario");

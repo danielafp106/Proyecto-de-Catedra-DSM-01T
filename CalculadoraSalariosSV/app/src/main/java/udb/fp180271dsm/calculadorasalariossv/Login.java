@@ -47,25 +47,25 @@ public class Login extends AppCompatActivity {
         //region Abrir Registarse
         txtRegistrarse1 = findViewById(R.id.txtRegistrar1);
         txtRegistrarse2 = findViewById(R.id.txtRegistrar2);
-        txtRestablecerContra = findViewById(R.id.txtRestablecerContrase);
+        txtRestablecerContra = findViewById(R.id.txtRegresar);
 
         txtRegistrarse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AbrirActivity(Login.this, Registrarse.class,"");
+                AbrirActivity(Login.this, Registrarse.class,"", "");
             }
         });
         txtRegistrarse2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AbrirActivity(Login.this, Registrarse.class,"");
+                AbrirActivity(Login.this, Registrarse.class,"","");
             }
         });
 
         txtRestablecerContra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AbrirActivity(Login.this, RestablecerContra.class,"");
+                AbrirActivity(Login.this, RestablecerContra.class,"","");
             }
         });
 
@@ -97,7 +97,7 @@ public class Login extends AppCompatActivity {
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
                             //abrimos la pantalla del menu
-                            AbrirActivity(Login.this, ContenedorMenu.class,user.getDisplayName());
+                            AbrirActivity(Login.this, ContenedorMenu.class,user.getDisplayName(),user.getUid());
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "Inicio de Sesion Incorrecto", Toast.LENGTH_LONG).show();
@@ -110,18 +110,19 @@ public class Login extends AppCompatActivity {
 
 
 
-    public void AbrirActivity(Context ActivityActual, Class ActivityNueva, String user) {
+    public void AbrirActivity(Context ActivityActual, Class ActivityNueva, String user,String uid) {
         Intent intento = new Intent(ActivityActual, ActivityNueva);
         if(user!="")
         {
             intento.putExtra("name",user);
+            intento.putExtra("uid",uid);
         }
         startActivity(intento);
     }
 
     public void InicioSesionCorrecto(View v)
     {
-        AbrirActivity(Login.this, ContenedorMenu.class,"");
+        AbrirActivity(Login.this, ContenedorMenu.class,"","");
     }
 /*
     public void prueba(View v)

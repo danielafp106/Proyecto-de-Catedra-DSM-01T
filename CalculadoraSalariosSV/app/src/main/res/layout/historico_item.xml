@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:cardBackgroundColor="@color/Blanco">
+    app:cardBackgroundColor="@color/BlancoSuave">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/BlancoSuave"
+        android:backgroundTint="@color/BlancoSuave"
+        android:scrollbarThumbHorizontal="@color/BlancoSuave"
+        android:scrollbarThumbVertical="@color/BlancoSuave">
 
         <TextView
             android:id="@+id/FondoHistorico"
             android:layout_width="match_parent"
             android:layout_height="625dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/historico_fondo"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +56,7 @@
             android:id="@+id/txtSalarioLQuincenalH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/DineroTexto"
@@ -100,7 +106,7 @@
             android:id="@+id/txtSalarioLMensualH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/DineroTexto"
@@ -164,7 +170,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/tarjetas_historico"
             app:layout_constraintEnd_toEndOf="parent"
@@ -214,7 +220,7 @@
             android:id="@+id/imageView22"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="3dp"
             app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/imageView21"
@@ -237,7 +243,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             android:text="@string/Descuentos"
             android:textColor="@color/Negro"
             android:textSize="12sp"
@@ -257,10 +263,10 @@
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
 
         <TextView
-            android:id="@+id/textView27"
+            android:id="@+id/txtPorAFP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:text="@string/AFP_Porcentaje"
             android:textAlignment="viewStart"
@@ -270,30 +276,30 @@
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco" />
 
         <TextView
-            android:id="@+id/textView28"
+            android:id="@+id/txtPorISSS"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
             android:text="@string/ISSS_Porcentaje"
             android:textAlignment="viewStart"
             android:textColor="@color/Negro"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView23"
-            app:layout_constraintTop_toBottomOf="@+id/textView27" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPorAFP" />
 
         <TextView
             android:id="@+id/txtRentaPorcentajeH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
             android:text="@string/Porcentaje2"
             android:textAlignment="viewStart"
             android:textColor="@color/Negro"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView23"
-            app:layout_constraintTop_toBottomOf="@+id/textView28" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPorISSS" />
 
         <TextView
             android:id="@+id/textView24"
@@ -322,7 +328,7 @@
             android:layout_width="16dp"
             android:layout_height="17dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fondoBlanco"
             app:srcCompat="@drawable/ic_baseline_percent_24" />
@@ -331,7 +337,7 @@
             android:id="@+id/imageView20"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="28dp"
             app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco"
@@ -341,7 +347,7 @@
             android:id="@+id/imageView23"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             app:layout_constraintStart_toEndOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/FondoBlanco"
@@ -351,7 +357,7 @@
             android:id="@+id/imageView24"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
             app:layout_constraintStart_toEndOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/imageView23"
@@ -361,7 +367,7 @@
             android:id="@+id/imageView25"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="3dp"
             app:layout_constraintStart_toEndOf="@+id/textView25"
             app:layout_constraintTop_toBottomOf="@+id/imageView24"
@@ -371,7 +377,7 @@
             android:id="@+id/imageView21"
             android:layout_width="16dp"
             android:layout_height="17dp"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="3dp"
             app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toBottomOf="@+id/imageView20"
@@ -379,15 +385,14 @@
 
         <TextView
             android:id="@+id/txtContratoH"
-            android:layout_width="wrap_content"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="Indefinido"
             android:textAlignment="viewStart"
             android:textColor="@color/Negro"
-            android:textSize="20sp"
+            android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
@@ -476,7 +481,7 @@
             android:id="@+id/txtFechaHistorico"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="1dp"
             android:background="@drawable/boton_redondeado"
             android:paddingStart="15dp"
             android:paddingTop="8dp"
@@ -530,7 +535,7 @@
             android:id="@+id/txtSalarioBrutoH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="175dp"
+            android:layout_marginStart="130dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/DineroTexto"
@@ -544,7 +549,7 @@
             android:id="@+id/txtSalarioBrutoH2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
+            android:layout_marginStart="45dp"
             android:layout_marginTop="60dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/DineroTexto"
@@ -558,7 +563,7 @@
             android:id="@+id/txtAFPDolaresH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/OtraCantidad"
@@ -572,7 +577,7 @@
             android:id="@+id/txtISSSDolaresH"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/OtraCantidad"
@@ -586,7 +591,7 @@
             android:id="@+id/txtRentaDolaresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="6dp"
             android:fontFamily="@font/roboto_light"
             android:text="@string/OtraCantidad"

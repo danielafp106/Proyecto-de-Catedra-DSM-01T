@@ -1,22 +1,41 @@
 package udb.fp180271dsm.calculadorasalariossv;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Date;
 
 
 public class Resultados extends Fragment {
 
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference calculosRef;
+
     private Double salario,RentaResult,AFPResult,ISSSResult;
-    private String contrato;
+    private String contrato,uid;
     private Integer resultado,idcontrato;
     private Double SalarioDescuento;
+    Double SalarioMensual;
+    Double SalarioQuincenal;
 
 
     private TextView afp,isss,renta,SalarioB1,SalarioB2,AFP_Dolar,ISSS_Dolar,Renta_Dolar,SalarioLMensual,SalarioLQuincena,TContrato;
@@ -110,18 +129,16 @@ public class Resultados extends Fragment {
         contrato =RecibirDatos.getString("RecibirContrato");
         idcontrato=RecibirDatos.getInt("RecibirIdContrato");
         resultado=RecibirDatos.getInt("RecibirOpcion");
+        uid = RecibirDatos.getString("uid");
 
-       if (resultado==1){
-           //Aqui guardaria el dato en Firebase jsjsjsjsj
-           Toast.makeText(getContext(), "Le diste que si jsjsj", Toast.LENGTH_LONG).show();
-       }
+
         // else (Igualmente va a mostrar los datos)
         if (idcontrato ==2){
             afp.setText("0.00%");
             isss.setText("0.00%");
             renta.setText("10.00%");
-            Double SalarioMensual = CalcularSalarioLiquido(salario, idcontrato);
-            Double SalarioQuincenal =SalarioMensual/2;
+            SalarioMensual = CalcularSalarioLiquido(salario, idcontrato);
+            SalarioQuincenal =SalarioMensual/2;
             TContrato.setText(contrato);
             SalarioB1.setText("$ "+String.format("%.2f",salario));
             SalarioB2.setText("$ "+String.format("%.2f",salario));
@@ -133,8 +150,8 @@ public class Resultados extends Fragment {
             SalarioLQuincena.setText("$ "+String.format("%.2f",SalarioQuincenal));
         }
         else{
-            Double SalarioMensual = CalcularSalarioLiquido(salario, idcontrato);
-            Double SalarioQuincenal =SalarioMensual/2;
+            SalarioMensual = CalcularSalarioLiquido(salario, idcontrato);
+            SalarioQuincenal =SalarioMensual/2;
 
             //TRAMOI
             if ((SalarioDescuento>=0.01) && (SalarioDescuento <= 472.00)){
@@ -162,6 +179,40 @@ public class Resultados extends Fragment {
 
         }
 
+        if (resultado==1){
+            HistoricoModel resultado = new HistoricoModel();
+            resultado.setAFP(AFPResult);
+            resultado.setISSS(ISSSResult);
+            resultado.setRenta(RentaResult);
+            resultado.setFechaHistorico(new Date(System.currentTimeMillis()));
+            resultado.setIdUsuario(uid);
+            resultado.setPorcentajeRenta(renta.getText().toString());
+            resultado.setPorcentajeISSS(isss.getText().toString());
+            resultado.setPorcentajeAFP(afp.getText().toString());
+            resultado.setSalarioBruto(salario);
+            resultado.setSalarioLiquidoMensual(SalarioMensual);
+            resultado.setSalarioLiquidoQuincenal(SalarioQuincenal);
+            resultado.setTipoContrato(contrato);
+            GuardarSalario(resultado);
+        }
+
+
+
         return view;
+    }
+
+    private void GuardarSalario(HistoricoModel resultados)
+    {
+        db.collection("calculos").add(resultados).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(getActivity(), "Resultado guardado con éxito", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(getActivity(), "Algo salió mal..", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
